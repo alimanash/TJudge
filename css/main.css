@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #0d1117;
+    color: #fff;
+}
+
+/*Header settings*/
+
+header.my-header {
+    background-color: #161b22;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+}
+
+header .menu-logo span {
+    color: #f0f6fc;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 42px;
+    margin-right: 40px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    margin-right: auto;
+    margin-top: 7px;
+}
+
+header ul li select {
+    width: 60px;
+    height: 30px;
+    background-color: #161b22;
+    color: #fff;   
+    border-radius: 10px;
+}
+
+header ul li {
+    margin-right: 25px;
+    font-size: 22px;
+    transition: border-bottom 1.5s ease;
+}
+
+header ul.menu li a:hover {
+    color: gray;
+}
+
+.menu-off {
+    display: flex;
+}
+
+.menu-off a {
+    display: block;
+    background-color: #1f6feb;
+    margin-right: 15px;
+    font-size: 22px;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: color, background-color 0.3s ease;
+}
+
+.menu-off a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/*.menu-off a.btn-reg {
+    background-color: #27d545;
+}
+
+.menu-off a.btn-reg:hover {
+    background-color: #28893c;
+}*/
+
+.menu-icon {
+    display: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.menu-btn {
+    margin-bottom: 5px;
+    background-color: #fff;
+    width: 35px;
+    height: 5px;
+}
+
+/* Header settings end */
+
+@media screen and (max-width: 906px) {
+    header ul {
+        position: absolute;
+        flex-direction: column;
+        background-color: #010409;
+        z-index: 1;
+        left: -30vh;
+        right: 0;
+        padding-top: 800px;
+        padding-left: 10px;
+        width: 30vh;
+        transition: transform 0.6s ease;
+        height: 100em;
+    }
+    header ul li {
+        margin-top: 20px;
+    }
+    .menu-icon {
+        display: block;
+        z-index: 2;
+    }
+    header .menu-logo span {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 425px){
+    header .menu-logo span {
+        font-size: 30px;
+    }   
+    .menu-off a {
+        padding: 3px 5px;
+    }
+}
